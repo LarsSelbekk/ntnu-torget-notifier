@@ -100,8 +100,10 @@ let isFirst = true;
         });
       });
       isFirst = false;
+    } catch (e) {
+    } finally {
       browser.close();
-    } catch (e) {}
+    }
     await sleep(parseInt(EACH_N_SEC, 10) * 1000);
   }
 })();
